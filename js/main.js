@@ -1,6 +1,19 @@
 (() => {
   'use strict';
 
+  // --- Dynamic years of experience ---
+  const CAREER_START_YEAR = 2021;
+  const yearsExp = new Date().getFullYear() - CAREER_START_YEAR;
+  const yearsLabel = `${yearsExp}+`;
+
+  const yearsHero = document.getElementById('years-hero');
+  const yearsStat = document.getElementById('years-stat');
+  const metaDesc = document.getElementById('meta-description');
+
+  if (yearsHero) yearsHero.textContent = yearsLabel;
+  if (yearsStat) yearsStat.textContent = yearsLabel;
+  if (metaDesc) metaDesc.content = metaDesc.content.replace(/\d+\+ years/, `${yearsLabel} years`);
+
   // --- Navbar scroll effect ---
   const navbar = document.getElementById('navbar');
 
