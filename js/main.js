@@ -7,11 +7,9 @@
   const yearsLabel = `${yearsExp}+`;
 
   const yearsHero = document.getElementById('years-hero');
-  const yearsStat = document.getElementById('years-stat');
   const metaDesc = document.getElementById('meta-description');
 
   if (yearsHero) yearsHero.textContent = yearsLabel;
-  if (yearsStat) yearsStat.textContent = yearsLabel;
   if (metaDesc) metaDesc.content = metaDesc.content.replace(/\d+\+ years/, `${yearsLabel} years`);
 
   // --- Navbar scroll effect ---
